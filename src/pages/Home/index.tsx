@@ -11,37 +11,28 @@ import FourthPage from './FourthPage';
 
 import style from './style.less';
 
-interface HomeState {
-    isHome: boolean;
-}
-
 // https://github.com/alvarotrigo/fullPage.js#methods
 export interface FullPageApi {
     getActiveSection: () => void;
     getActiveSlide: () => void;
     moveSectionUp: () => void;
     moveSectionDown: () => void;
+    moveTo: (index: number) => void;
 }
 
 // ClassicComponent传入两个类型，一个为props，一个为当前class的state。
-class Home extends Component<{}, HomeState> {
-    state = {
-        isHome: true,
-    };
-
-    componentDidMount() {}
-
+class Home extends Component<{}, {}> {
     render() {
         return (
             <div className={style.container}>
                 <ReactFullpage
-                    licenseKey={'12312312312'}
+                    licenseKey={'a5s4das1d3as4d56'}
                     scrollingSpeed={1000}
+                    navigation
                     render={({
                         fullpageApi,
                     }: {
                         fullpageApi: FullPageApi;
-                        state: HomeState;
                     }) => {
                         return (
                             <ReactFullpage.Wrapper>

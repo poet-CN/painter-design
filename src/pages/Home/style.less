@@ -1,9 +1,32 @@
 .container {
-    background-color: #b7b7b7;
+    background-color: #fdf5f2;
+    color: #000000;
+}
+
+/* 标题 start */
+.section_title {
+    margin-top: 40px;
+    text-align: center;
+
+    span:first-child {
+        font-size: 70px;
+        margin-right: 15px;
+    }
+
+    span:last-child {
+        font-size: 30px;
+    }
+}
+
+/* 标题 end */
+
+/* Page1 start */
+.page1_wrapper {
+    background: #000 url('../../assets/home/page1_bg.jpg') no-repeat center;
+    background-size: 100% 100%;
     color: #ffffff;
 }
 
-/* Page1 start */
 .header {
     height: 150px;
     overflow: hidden;
@@ -21,6 +44,7 @@
     font-size: 25px;
     line-height: 30px;
     font-weight: 200;
+
     > li {
         float: left;
         margin-right: 70px;
@@ -34,11 +58,13 @@
     right: 0;
     margin: 0 auto;
     text-align: center;
+
     > h1 {
         font-size: 60px;
         font-weight: 600;
         margin: 0 0 10px;
     }
+
     > p {
         font-size: 25px;
     }
@@ -47,14 +73,96 @@
 /* Page1 end */
 
 /* Page2 start */
-.page1_wrapper {
-    background: #000 url('../../assets/home/page1_bg.jpg') no-repeat center;
-    background-size: 100% 100%;
+.page2_wrapper {
+    .left_side {
+        width: 50%;
+        float: left;
+    }
+
+    .right_side {
+        width: 50%;
+        float: right;
+        margin-top: 270px;
+        text-align: center;
+
+        .name {
+            display: block;
+            margin: 0 auto 50px;
+        }
+
+        .desc {
+            font-size: 30px;
+
+            > span:not(:last-child)::after {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                margin: 0 5px;
+                background-color: #000000;
+                vertical-align: middle;
+                content: '';
+            }
+        }
+    }
 }
+
 /* Page2 end */
 
 /* Page3 start */
+.page3_wrapper {
+    .portfolio_wrapper {
+        > li {
+            width: 400px;
+            height: 300px;
+            float: left;
+        }
+    }
+}
+
 /* Page3 end */
 
 /* Page4 start */
+.page4_wrapper {
+    background: #000 url('../../assets/home/page4_bg.png') no-repeat center;
+    color: #ffffff;
+
+    .contract_info {
+        margin: 200px 0 250px;
+
+        > li {
+            float: left;
+            font-size: 30px;
+
+            &:nth-child(odd) {
+                width: 65%;
+                padding-left: 70px;
+            }
+
+            &:nth-child(even) {
+                width: 35%;
+            }
+
+            &:not(:last-child):not(:nth-last-child(2)) {
+                margin-bottom: 45px;
+            }
+
+            > span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            > span:first-child {
+                margin-right: 20px;
+                font-size: 45px;
+            }
+        }
+    }
+
+    .epilogue {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
 /* Page4 end */

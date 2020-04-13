@@ -9,7 +9,6 @@ import EmptyLayout from './EmptyLayout';
 class Layout extends Component<any, null> {
     getLayout = () => {
         // const { pathname } = this.props.location;
-        console.log(1);
         return <EmptyLayout {...this.props} />;
     };
 

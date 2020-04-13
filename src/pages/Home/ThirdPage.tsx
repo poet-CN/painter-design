@@ -9,9 +9,14 @@ interface ThirdPageProps {
 class ThirdPage extends Component<ThirdPageProps, {}> {
     render() {
         return (
-            <div className="section pr">
-                <div>
-                    <h1>ThirdPage</h1>
+            <div className={`${style.page3_wrapper} section pr`}>
+                <div className="wrapper">
+                    <div>
+                        <p className={style.section_title}>
+                            <span>Work</span>
+                            <span>爱设计</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         );

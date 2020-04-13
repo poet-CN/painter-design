@@ -11,7 +11,6 @@ interface BasicLayoutProps {
 
 class EmptyLayout extends Component<BasicLayoutProps, {}> {
     render() {
-        console.log(this.props.children);
         return <>{this.props.children}</>;
     }
 }

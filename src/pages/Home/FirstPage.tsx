@@ -7,6 +7,17 @@ interface FirstPageProps {
 }
 
 class FirstPage extends Component<FirstPageProps, {}> {
+    nav = ['Welcome', 'Me', 'Work', 'Contract'];
+
+    togglePage = (e: any) => {
+        const target = e.nativeEvent.target || e.nativeEvent.srcElement;
+        if (target) {
+            if (target.nodeName.toLowerCase() === 'p') {
+                this.props.fullpageApi.moveTo(Number(target.dataset.index) + 1);
+            }
+        }
+    };
+
     render() {
         return (
             <div className={`${style.page1_wrapper} section pr`}>
@@ -14,19 +25,14 @@ class FirstPage extends Component<FirstPageProps, {}> {
                     <div className={`${style.logo} fl`}>
                         <p>QIAN</p>
                     </div>
-                    <ul className={`${style.nav} fr clear_float`}>
-                        <li>
-                            <p>Welcome</p>
-                        </li>
-                        <li>
-                            <p>Me</p>
-                        </li>
-                        <li>
-                            <p>Work</p>
-                        </li>
-                        <li>
-                            <p>Contract</p>
-                        </li>
+                    <ul className={`${style.nav} fr clear_float`} onClick={this.togglePage}>
+                        {
+                            this.nav.map((item, index) => (
+                                <li key={item} className="cp">
+                                    <p data-index={index.toString()}>{item}</p>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </header>
                 <div className={style.home_introduce}>

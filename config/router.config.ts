@@ -31,11 +31,11 @@ const routerConfig: RouterConfigProps[] = [
                 title: '作品详情页',
                 exact: true,
             },
-            {
-                path: '/loading',
-                component: '../pages/Loading',
-                title: '加载中页面',
-            },
+            // {
+            //     path: '/loading',
+            //     component: '../pages/Loading',
+            //     title: '加载中页面',
+            // },
             {
                 path: '*',
                 component: '../pages/NotFound',
