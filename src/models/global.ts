@@ -1,22 +1,14 @@
-import { Effect } from 'dva';
-import { Reducer } from 'redux';
-
-export interface GlobalStoreState {
-    greeting: string;
-}
 
 interface GlobalStoreType {
     namespace: string;
-    state: GlobalStoreState;
+    state: {};
     effects: {};
     reducers: {};
 }
 
 const globalStore: GlobalStoreType = {
     namespace: 'global',
-    state: {
-        greeting: '你好',
-    },
+    state: {},
     effects: {},
     reducers: {},
 };

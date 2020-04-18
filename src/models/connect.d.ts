@@ -1,5 +1,11 @@
-import { GlobalStoreState } from '@/models/global';
+interface historyType {
+    go: (backNum: number) => void;
+    push: (index: string) => void;
+    location: {
+        pathname: string;
+    };
+}
 
 export interface ConnectType {
-    global: GlobalStoreState;
+    historyType: historyType;
 }

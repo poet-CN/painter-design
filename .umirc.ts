@@ -4,8 +4,7 @@ import routerConfig from './config/router.config';
 export default defineConfig({
     history: { type: 'hash' },
     routes: routerConfig,
-    // dynamicImport: {
-    //     loading: '@/pages/Loading',
-    // },
+    inlineLimit: 2000000,
     hash: true,
+    favicon: 'favicon.ico',
 });

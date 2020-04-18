@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { FullPageApi } from './index';
-import Name from '@/assets/home/name.png';
+
+import ImgAvatar from '@/assets/home/page2_avatar.jpg';
+import ImgName from '@/assets/home/page2_name.png';
+import ImgGetMore from '@/assets/home/get_more.png';
+
 import style from './style.less';
+
+import { FullPageApi } from './index';
 
 interface SecondPageProps {
     fullpageApi: FullPageApi;
@@ -10,8 +15,8 @@ interface SecondPageProps {
 class SecondPage extends Component<SecondPageProps, {}> {
     render() {
         return (
-            <div className={`${style.page2_wrapper} section pr`}>
-                <div className="wrapper">
+            <div className={`${style.page2_wrapper} section`}>
+                <div className="wrapper pr">
                     <div className={style.section_title}>
                         <p>
                             <span>Me</span>
@@ -19,16 +24,21 @@ class SecondPage extends Component<SecondPageProps, {}> {
                         </p>
                     </div>
                     <div className="clear_float pr">
-                        <div className={style.leftSide}>
-
+                        <div className={style.left_side}>
+                            <img src={ImgAvatar} alt="Avatar"/>
                         </div>
                         <div className={style.right_side}>
-                            <img className={style.name} src={Name} alt="name"/>
+                            <img className={style.name} src={ImgName} alt="name"/>
                             <p className={style.desc}>
                                 <span>河北工业大学</span>
                                 <span>工业设计专业</span>
                                 <span>大三在读</span>
                             </p>
+                        </div>
+                        <div className={style.get_more}>
+                            <a href={`${window.location.origin}/李倩-河北工业大学.pdf`}>
+                                <img src={ImgGetMore} alt="获取简历"/>
+                            </a>
                         </div>
                     </div>
                 </div>

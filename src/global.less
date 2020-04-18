@@ -25,6 +25,15 @@ h1 {
 .cp {
     cursor: pointer;
 }
+
+.ov_hd {
+    overflow: hidden;
+}
+
+.ta_c {
+    text-align: center;
+}
+
 /* 基础样式 end */
 
 /* 浮动相关 start */
@@ -54,6 +63,7 @@ h1 {
 .pr {
     position: relative;
 }
+
 /* 定位相关 end */
 
 // 重置FullPage插件的元素
@@ -64,7 +74,20 @@ body {
             vertical-align: unset;
         }
     }
+
     #fp-nav ul li a span {
         background-color: #ffffff;
     }
 }
+
+/* 详情页包裹层 start */
+.profile_detail_wrapper {
+    min-height: 100%;
+
+    > img {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* 详情页包裹层 end */

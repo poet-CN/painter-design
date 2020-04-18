@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { FullPageApi } from './index';
 import style from './style.less';
+
+import { FullPageApi } from './index';
 
 interface FirstPageProps {
     fullpageApi: FullPageApi;
