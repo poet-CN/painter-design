@@ -41,9 +41,11 @@ class ThirdPage extends Component<ThirdPageProps, {}> {
                     </div>
                     <div className={style.profile_wrapper}>
                         <ul>
-                            {this.profiles.map((item: profileItem) => (
+                            {this.profiles.map((item: profileItem, index: number) => (
                                 <li key={item.name}>
-                                    <img src={item.src} alt={item.name}/>
+                                    <Link to={`/profile/detail/${index + 1}`}>
+                                        <img src={item.src} alt={item.name}/>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
