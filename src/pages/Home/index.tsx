@@ -26,7 +26,7 @@ class Home extends Component<{}, {}> {
         return (
             <div className={style.container}>
                 <ReactFullpage
-                    licenseKey={'a5s4das1d3as4d56'}
+                    licenseKey={'W$8ys$H?h6'}
                     scrollingSpeed={1000}
                     navigation
                     render={({

@@ -3,7 +3,8 @@ import ReturnBtn from '@/components/ReturnBtn';
 import { ConnectType } from '@/models/connect';
 
 interface ProfileDetailLayoutProps {
-    history: ConnectType['historyType'];
+    location: ConnectType['location'];
+    history: ConnectType['history'];
 }
 
 interface ProfileDetailLayoutState {
@@ -17,7 +18,7 @@ class ProfileDetailLayout extends Component<ProfileDetailLayoutProps, ProfileDet
 
     // 想做成，详情页固定返回列表页，列表页固定返回首页
     goBack = () => {
-        const { pathname } = this.props.history.location;
+        const { pathname } = this.props.location;
         if (pathname.indexOf('detail') > -1) {
             this.setState({
                 returnPath: '/profile/list',
@@ -32,7 +33,7 @@ class ProfileDetailLayout extends Component<ProfileDetailLayoutProps, ProfileDet
     render() {
         return (
             <>
-                <ReturnBtn history={this.props.history}/>
+                <ReturnBtn {...this.props}/>
                 {this.props.children}
             </>
         );
