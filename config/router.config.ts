@@ -56,6 +56,12 @@ const routerConfig: RouterConfigProps[] = [
                 exact: true,
             },
             {
+                path: '/profile/detail/6',
+                component: '@/pages/Profile/Detail/6',
+                title: '李倩-智能化妆镜',
+                exact: true,
+            },
+            {
                 path: '*',
                 component: '../pages/NotFound',
                 title: '未找到的页面',

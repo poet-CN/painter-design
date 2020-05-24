@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'umi';
 
+import ImgProfile6 from '@/assets/profile_cover/profile6.jpg';
 import ImgProfile1 from '@/assets/profile_cover/profile1.jpg';
-import ImgProfile2 from '@/assets/profile_cover/profile2.jpg';
 import ImgGetMore from '@/assets/home/get_more.png';
 
 import style from './style.less';
@@ -13,20 +13,23 @@ interface ThirdPageProps {
     fullpageApi: FullPageApi;
 }
 
-interface profileItem {
+interface ProfileItem {
     src: string;
+    index: number;
     name: string;
 }
 
 class ThirdPage extends Component<ThirdPageProps, {}> {
-    profiles = [
+    profiles: ProfileItem[] = [
         {
-        src: ImgProfile1,
-        name: '作品1',
-    },  {
-        src: ImgProfile2,
-        name: '作品2',
-    },
+            src: ImgProfile6,
+            index: 6,
+            name: '作品1'
+        }, {
+            src: ImgProfile1,
+            index: 1,
+            name: '作品1'
+        }
     ];
 
     render() {
@@ -41,9 +44,9 @@ class ThirdPage extends Component<ThirdPageProps, {}> {
                     </div>
                     <div className={style.profile_wrapper}>
                         <ul>
-                            {this.profiles.map((item: profileItem, index: number) => (
+                            {this.profiles.map((item: ProfileItem) => (
                                 <li key={item.name}>
-                                    <Link to={`/profile/detail/${index + 1}`}>
+                                    <Link to={`/profile/detail/${item.index}`}>
                                         <img src={item.src} alt={item.name}/>
                                     </Link>
                                 </li>

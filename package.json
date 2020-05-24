@@ -12,9 +12,13 @@
         "axios": "^0.19.2",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
-        "umi": "^3.0.12"
+        "umi": "^3.0.12",
+        "video-react": "^0.14.1"
     },
     "devDependencies": {
-        "shelljs": "^0.8.3"
+        "@typescript-eslint/eslint-plugin": "^2.34.0",
+        "@typescript-eslint/parser": "^2.34.0",
+        "eslint": "^7.0.0",
+        "typescript": "^3.8.3"
     }
 }
