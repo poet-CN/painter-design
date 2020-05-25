@@ -22,6 +22,5 @@
 # editor
 /.idea
 
-# 七牛cdn自动生成的cdn和log文件
-qn.config.json
-qnupload.log
+# cdn文件
+upload.tencent.js
