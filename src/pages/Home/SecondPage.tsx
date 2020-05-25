@@ -36,7 +36,7 @@ class SecondPage extends Component<SecondPageProps, {}> {
                             </p>
                         </div>
                         <div className={style.get_more}>
-                            <a href={`${window.location.origin}/李倩-河北工业大学.pdf`}>
+                            <a href={'https://poet-1253467707.cos.ap-beijing.myqcloud.com/李倩-河北工业大学.pdf'}>
                                 <img src={ImgGetMore} alt="获取简历"/>
                             </a>
                         </div>
