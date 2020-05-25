@@ -24,7 +24,7 @@ class ThirdPage extends Component<ThirdPageProps, {}> {
         {
             src: ImgProfile6,
             index: 6,
-            name: '作品1'
+            name: '作品6'
         }, {
             src: ImgProfile1,
             index: 1,
