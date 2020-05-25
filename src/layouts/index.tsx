@@ -13,6 +13,7 @@ class Layout extends Component<any, null> {
     }
 
     componentDidMount(): void {
+        window.lover = 'Poet';
         // 禁用右键菜单
         document.oncontextmenu = () => {
             return false;
