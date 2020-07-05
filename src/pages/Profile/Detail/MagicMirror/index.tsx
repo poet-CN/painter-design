@@ -48,7 +48,7 @@ class ProfileDetail6 extends Component<{}, {}>{
                 <img src={Profile6Section20} alt="加载失败"/>
                 <img src={Profile6Section21} alt="加载失败"/>
                 <video autoPlay muted loop>
-                    <source src={'https://poet-1253467707.cos.ap-beijing.myqcloud.com/profile6video1.mp4'}/>
+                    <source src={'https://poet-1253467707.cos.ap-beijing.myqcloud.com/magic-mirror-video1.mp4'}/>
                 </video>
             </div>
         );
