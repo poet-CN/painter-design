@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import { Link } from 'umi';
 import ReturnBtn from '@/components/ReturnBtn';
 
-import ImgProfile1 from '@/assets/profile_cover/profile1.jpg';
-import ImgProfile2 from '@/assets/profile_cover/profile2.jpg';
-import ImgProfile3 from '@/assets/profile_cover/profile3.jpg';
-import ImgProfile4 from '@/assets/profile_cover/profile4.jpg';
-import ImgProfile5 from '@/assets/profile_cover/profile5.jpg';
-import ImgProfile6 from '@/assets/profile_cover/profile6.jpg';
+import GameCityCover from '@/assets/profile_cover/game-city-cover.jpg';
+import SpoolsCover from '@/assets/profile_cover/spools-cover.jpg';
+import HealthCareCover from '@/assets/profile_cover/health-care-cover.jpg';
+import CoatRackCover from '@/assets/profile_cover/coat-rack-cover.jpg';
+import ModularFurnitureCover from '@/assets/profile_cover/modular-furniture-cover.jpg';
+import MagicMirrorCover from '@/assets/profile_cover/magic-mirror-cover.jpg';
+import KeSilkCover from '@/assets/profile_cover/ke-silk-cover.jpg';
+import RescueEquipmentCover from '@/assets/profile_cover/rescue-equipment-cover.jpg';
+import PreExaminationCover from '@/assets/profile_cover/pre-examination-cover.jpg';
+import SmartCarCover from '@/assets/profile_cover/smart-car-cover.jpg';
 
 import style from './style.less';
 
 interface ProfileItem {
     src: string;
-    index: number;
+    path: string;
     name: string;
 }
 
@@ -25,30 +29,46 @@ interface ProfileListProps {
 }
 
 class ProfileList extends Component<ProfileListProps, {}> {
-    profiles: ProfileItem[] = [{
-        src: ImgProfile6,
-        index: 6,
-        name: '作品6'
+    profiles: ProfileItem[] = [ {
+        src: HealthCareCover,
+        path: 'health-care',
+        name: '儿童用心电图机吸球'
     }, {
-        src: ImgProfile1,
-        index: 1,
-        name: '作品1'
+        src: MagicMirrorCover,
+        path: 'magic-mirror',
+        name: '"魔镜"智能化妆镜'
     }, {
-        src: ImgProfile2,
-        index: 2,
-        name: '作品2'
+        src: GameCityCover,
+        path: 'game-city',
+        name: '风云再起电玩城包装设计'
     }, {
-        src: ImgProfile3,
-        index: 3,
-        name: '作品3'
+        src: SpoolsCover,
+        path: 'spools',
+        name: '"破茧成蝶"绕线轴设计'
     }, {
-        src: ImgProfile4,
-        index: 4,
-        name: '作品4'
+        src: KeSilkCover,
+        path: 'ke-silk',
+        name: '"缂丝织发"缂丝文创'
     }, {
-        src: ImgProfile5,
-        index: 5,
-        name: '作品5'
+        src: RescueEquipmentCover,
+        path: 'rescue-equipment',
+        name: '多功能地震救援装备'
+    }, {
+        src: PreExaminationCover,
+        path: 'pre-examination',
+        name: '预检分诊机器人'
+    }, {
+        src: SmartCarCover,
+        path: 'smart-car',
+        name: '智能汽车空间布局设计'
+    }, {
+        src: CoatRackCover,
+        path: 'coat-rack',
+        name: '翻花绳组合衣帽架'
+    }, {
+        src: ModularFurnitureCover,
+        path: 'modular-furniture',
+        name: '几何家居'
     }];
 
     render() {
@@ -66,8 +86,11 @@ class ProfileList extends Component<ProfileListProps, {}> {
                         {
                             this.profiles.map((item: ProfileItem) => (
                                 <li key={item.name}>
-                                    <Link to={`/profile/detail/${item.index}`}>
+                                    <Link to={`/profile/detail/${item.path}`}>
                                         <img src={item.src} alt={item.name}/>
+                                        <div className={style.mask}>
+                                            <p>{item.name}</p>
+                                        </div>
                                     </Link>
                                 </li>
                             ))

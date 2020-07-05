@@ -24,15 +24,35 @@
 
 .profile_wrapper {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     > li {
-        width: 50%;
+        position: relative;
+        width: 508px;
         height: 359px;
         margin-bottom: 50px;
-        img, > a {
+        overflow: hidden;
+        &:hover .mask {
+            top: 0;
+        }
+        img, > a, .mask {
             display: block;
-            width: 508px;
+            width: 100%;
             margin: 0 auto;
+        }
+        .mask {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: absolute;
+            top: 359px;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, .4);
+            font-size: 20px;
+            color: #ffffff;
+            transition: top 0.5s;
         }
     }
 }

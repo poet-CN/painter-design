@@ -32,7 +32,7 @@ class SecondPage extends Component<SecondPageProps, {}> {
                             <p className={style.desc}>
                                 <span>河北工业大学</span>
                                 <span>工业设计专业</span>
-                                <span>大三在读</span>
+                                <span>2021届</span>
                             </p>
                         </div>
                         <div className={style.get_more}>

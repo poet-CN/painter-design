@@ -1,6 +1,6 @@
 /*tslint:disable*/
 /*
- * date: 2018/10/24
+ * date: 2018/smart-car/24
  * usage: 全局请求函数。用法：在services文件夹调用$post或者$get。
  */
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'umi';
 
-import ImgProfile6 from '@/assets/profile_cover/profile6.jpg';
-import ImgProfile1 from '@/assets/profile_cover/profile1.jpg';
+import MagicMirrorCover from '@/assets/profile_cover/magic-mirror-cover.jpg';
+import HealthCareCover from '@/assets/profile_cover/health-care-cover.jpg';
 import ImgGetMore from '@/assets/home/get_more.png';
 
 import style from './style.less';
@@ -15,21 +15,21 @@ interface ThirdPageProps {
 
 interface ProfileItem {
     src: string;
-    index: number;
+    path: string;
     name: string;
 }
 
 class ThirdPage extends Component<ThirdPageProps, {}> {
     profiles: ProfileItem[] = [
         {
-            src: ImgProfile6,
-            index: 6,
-            name: '作品6'
+            src: HealthCareCover,
+            path: 'health-care',
+            name: '儿童用心电图机吸球'
         }, {
-            src: ImgProfile1,
-            index: 1,
-            name: '作品1'
-        }
+            src: MagicMirrorCover,
+            path: 'magic-mirror',
+            name: '"魔镜"智能化妆镜'
+        },
     ];
 
     render() {
@@ -46,15 +46,18 @@ class ThirdPage extends Component<ThirdPageProps, {}> {
                         <ul>
                             {this.profiles.map((item: ProfileItem) => (
                                 <li key={item.name}>
-                                    <Link to={`/profile/detail/${item.index}`}>
+                                    <Link to={`/profile/detail/${item.path}`}>
                                         <img src={item.src} alt={item.name}/>
+                                        <div className={style.mask}>
+                                            <p>{item.name}</p>
+                                        </div>
                                     </Link>
                                 </li>
                             ))}
                         </ul>
                         <div className={style.get_more}>
                             <Link to="/profile/list">
-                                <img src={ImgGetMore} alt="读取更多"/>
+                                <img src={ImgGetMore} alt="查看更多"/>
                             </Link>
                         </div>
                     </div>
