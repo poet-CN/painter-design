@@ -82,11 +82,17 @@ body {
 
 /* 详情页包裹层 start */
 .profile_detail_wrapper {
+    max-width: 1920px;
     min-height: 100%;
+    margin: 0 auto;
 
     > img {
         display: block;
         width: 100%;
+        &.half {
+            width: 50%;
+            margin: 0 auto;
+        }
     }
 
     > video {
