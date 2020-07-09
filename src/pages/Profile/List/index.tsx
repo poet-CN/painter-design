@@ -12,6 +12,7 @@ import KeSilkCover from '@/assets/profile_cover/ke-silk-cover.jpg';
 import RescueEquipmentCover from '@/assets/profile_cover/rescue-equipment-cover.jpg';
 import PreExaminationCover from '@/assets/profile_cover/pre-examination-cover.jpg';
 import SmartCarCover from '@/assets/profile_cover/smart-car-cover.jpg';
+import MP3Cover from '@/assets/profile_cover/mp3-cover.jpg';
 
 import style from './style.less';
 
@@ -69,6 +70,10 @@ class ProfileList extends Component<ProfileListProps, {}> {
         src: ModularFurnitureCover,
         path: 'modular-furniture',
         name: '几何家居'
+    }, {
+        src: MP3Cover,
+        path: 'mp3',
+        name: '复读机音乐播放器'
     }];
 
     render() {
@@ -82,7 +87,7 @@ class ProfileList extends Component<ProfileListProps, {}> {
                             <span>爱设计</span>
                         </p>
                     </div>
-                    <ul className={`${style.profile_wrapper} clear_float`}>
+                    <ul className={style.profile_wrapper}>
                         {
                             this.profiles.map((item: ProfileItem) => (
                                 <li key={item.name}>

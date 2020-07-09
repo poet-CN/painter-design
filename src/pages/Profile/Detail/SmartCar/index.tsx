@@ -12,6 +12,8 @@ import Profile10Section9 from '@/assets/profile_detail/smart-car/section9.jpg';
 import Profile10Section10 from '@/assets/profile_detail/smart-car/section10.jpg';
 import Profile10Section11 from '@/assets/profile_detail/smart-car/section11.jpg';
 
+import { cdnUrl } from '@/utils/constants';
+
 class ProfileDetail10 extends Component<{}, {}>{
     render() {
         return (
@@ -27,6 +29,9 @@ class ProfileDetail10 extends Component<{}, {}>{
                 <img src={Profile10Section9} alt="加载失败"/>
                 <img src={Profile10Section10} alt="加载失败"/>
                 <img src={Profile10Section11} alt="加载失败"/>
+                <video autoPlay muted loop>
+                    <source src={`${cdnUrl}/smart-car-video1.mp4`}/>
+                </video>
             </div>
         );
     }

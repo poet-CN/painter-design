@@ -22,6 +22,8 @@ import Profile6Section19 from '@/assets/profile_detail/magic-mirror/section19.jp
 import Profile6Section20 from '@/assets/profile_detail/magic-mirror/section20.jpg';
 import Profile6Section21 from '@/assets/profile_detail/magic-mirror/section21.jpg';
 
+import { cdnUrl } from '@/utils/constants';
+
 class ProfileDetail6 extends Component<{}, {}>{
     render() {
         return (
@@ -48,7 +50,7 @@ class ProfileDetail6 extends Component<{}, {}>{
                 <img src={Profile6Section20} alt="加载失败"/>
                 <img src={Profile6Section21} alt="加载失败"/>
                 <video autoPlay muted loop>
-                    <source src={'https://poet-1253467707.cos.ap-beijing.myqcloud.com/magic-mirror-video1.mp4'}/>
+                    <source src={`${cdnUrl}/magic-mirror-video1.mp4`}/>
                 </video>
             </div>
         );

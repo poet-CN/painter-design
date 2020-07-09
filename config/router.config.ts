@@ -86,6 +86,12 @@ const routerConfig: RouterConfigProps[] = [
                 exact: true,
             },
             {
+                path: '/profile/detail/mp3',
+                component: '@/pages/Profile/Detail/MP3',
+                title: '李倩-复读机音乐播放器',
+                exact: true,
+            },
+            {
                 path: '*',
                 component: '../pages/NotFound',
                 title: '未找到的页面',
