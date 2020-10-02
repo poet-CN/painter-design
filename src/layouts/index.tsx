@@ -32,7 +32,7 @@ class Layout extends Component<LayoutProps, {}> {
         document.onselectstart = () => {
             return false;
         };
-        // 禁止图片拖动
+        // 禁止拖动
         document.ondragstart = () => {
             return false;
         };

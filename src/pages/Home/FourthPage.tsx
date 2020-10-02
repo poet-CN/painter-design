@@ -27,7 +27,7 @@ class FourthPage extends Component<FourthPageProps, {}> {
                         </li>
                         <li>
                             <WechatOutlined />
-                            <span>Q17302213907MY</span>
+                            <span>qianxixixixi_</span>
                         </li>
                         <li>
                             <GlobalOutlined />

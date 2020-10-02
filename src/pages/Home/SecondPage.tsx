@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ImgAvatar from '@/assets/home/page2_avatar.jpg';
+import ImgAvatar from '@/assets/home/page2_avatar.png';
 import ImgName from '@/assets/home/page2_name.png';
 import ImgGetMore from '@/assets/home/get_more.png';
 
