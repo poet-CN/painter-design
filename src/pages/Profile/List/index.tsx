@@ -13,6 +13,7 @@ import RescueEquipmentCover from '@/assets/profile_cover/rescue-equipment-cover.
 import PreExaminationCover from '@/assets/profile_cover/pre-examination-cover.jpg';
 import SmartCarCover from '@/assets/profile_cover/smart-car-cover.jpg';
 import MP3Cover from '@/assets/profile_cover/mp3-cover.jpg';
+import XIngCover from '@/assets/profile_cover/x-ing-cover.png';
 
 import style from './style.less';
 
@@ -30,22 +31,26 @@ interface ProfileListProps {
 }
 
 class ProfileList extends Component<ProfileListProps, {}> {
-    profiles: ProfileItem[] = [ {
-        src: HealthCareCover,
-        path: 'health-care',
-        name: '儿童用心电图机吸球'
+    profiles: ProfileItem[] = [{
+        src: XIngCover,
+        path: 'x-ing',
+        name: 'X-ing性启蒙教育服务系统设计'
     }, {
         src: MagicMirrorCover,
         path: 'magic-mirror',
         name: '"魔镜"智能化妆镜'
     }, {
+        src: SpoolsCover,
+        path: 'spools',
+        name: '"破茧成蝶"绕线轴设计'
+    }, {
         src: GameCityCover,
         path: 'game-city',
         name: '风云再起电玩城包装设计'
     }, {
-        src: SpoolsCover,
-        path: 'spools',
-        name: '"破茧成蝶"绕线轴设计'
+        src: HealthCareCover,
+        path: 'health-care',
+        name: '儿童用心电图机吸球'
     }, {
         src: KeSilkCover,
         path: 'ke-silk',

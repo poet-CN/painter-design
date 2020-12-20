@@ -92,6 +92,12 @@ const routerConfig: RouterConfigProps[] = [
                 exact: true,
             },
             {
+                path: '/profile/detail/x-ing',
+                component: '@/pages/Profile/Detail/XIng',
+                title: '李倩-X-ing性启蒙教育服务系统设计',
+                exact: true,
+            },
+            {
                 path: '*',
                 component: '../pages/NotFound',
                 title: '未找到的页面',

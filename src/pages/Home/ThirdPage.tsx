@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'umi';
 
 import MagicMirrorCover from '@/assets/profile_cover/magic-mirror-cover.jpg';
-import HealthCareCover from '@/assets/profile_cover/health-care-cover.jpg';
+import XIngCover from '@/assets/profile_cover/x-ing-cover.png';
 import ImgGetMore from '@/assets/home/get_more.png';
 
 import style from './style.less';
@@ -22,9 +22,9 @@ interface ProfileItem {
 class ThirdPage extends Component<ThirdPageProps, {}> {
     profiles: ProfileItem[] = [
         {
-            src: HealthCareCover,
-            path: 'health-care',
-            name: '儿童用心电图机吸球'
+            src: XIngCover,
+            path: 'x-ing',
+            name: 'X-ing性启蒙教育服务系统设计'
         }, {
             src: MagicMirrorCover,
             path: 'magic-mirror',
