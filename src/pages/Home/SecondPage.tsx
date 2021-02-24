@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ImgAvatar from '@/assets/home/page2_avatar.png';
 import ImgName from '@/assets/home/page2_name.png';
-import ImgGetMore from '@/assets/home/get_more.png';
+import ImgGetResume from '@/assets/home/get_resume.png';
 
 import style from './style.less';
 
@@ -37,7 +37,7 @@ class SecondPage extends Component<SecondPageProps, {}> {
                         </div>
                         <div className={style.get_more}>
                             <a href={'https://poet-1253467707.cos.ap-beijing.myqcloud.com/李倩-UIUX设计师-河北工业大学.pdf'}>
-                                <img src={ImgGetMore} alt="获取简历"/>
+                                <img src={ImgGetResume} alt="获取简历"/>
                             </a>
                         </div>
                     </div>
